@@ -1,5 +1,6 @@
 <script setup lang="ts">
 useHead({ title: 'Home | Aya' })
+const { baseURL } = useRuntimeConfig().app
 </script>
 
 <template>
@@ -37,7 +38,7 @@ useHead({ title: 'Home | Aya' })
       <div class="absolute -bottom-4 -right-4 h-full w-full rounded-[2rem] bg-denim" aria-hidden="true" />
       <div class="absolute -left-3 top-8 h-24 w-3 rounded-full bg-lanyard" aria-hidden="true" />
       <img
-        src="/aya.jpg"
+        :src="`${baseURL}aya.jpg`"
         alt="Aya smiling and winking, wearing a denim jacket and amber-tinted glasses"
         class="relative aspect-[4/5] w-full rounded-[2rem] object-cover"
         width="900"

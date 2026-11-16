@@ -1,5 +1,6 @@
 <script setup lang="ts">
 useHead({ title: 'Profile | Aya' })
+const { baseURL } = useRuntimeConfig().app
 
 // Edit the details below to update the page.
 const personalInfo = [
@@ -46,7 +47,7 @@ const hobbies = [
   <div>
     <header class="flex flex-col items-center gap-6 sm:flex-row">
       <img
-        src="/aya.jpg"
+        :src="`${baseURL}aya.jpg`"
         alt="Portrait of Aya"
         class="h-32 w-32 rounded-full border-4 border-denim object-cover object-top"
         width="128"
